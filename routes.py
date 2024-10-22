@@ -45,5 +45,3 @@ def download_balance_sheet():
     balance_sheet_data = [{"id": exp.id, "amount": exp.total_amount, "split_type": exp.split_type} for exp in expenses]
     
     return jsonify(balance_sheet_data), 200
-
-# Add more endpoints as required...
