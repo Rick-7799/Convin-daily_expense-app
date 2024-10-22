@@ -24,7 +24,7 @@ Follow these steps to set up and run the project locally:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/daily_expenses_app.git
+   git clone https://github.com/Rick-7799/Convin-daily_expense-app.git
    cd daily_expenses_app
    ```
 
