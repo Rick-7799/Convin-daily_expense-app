@@ -19,7 +19,6 @@ class ExpenseAppTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 201)
 
     def test_add_expense(self):
-        # First create a user then add an expense for that user.
         self.app.post('/users', json={'email': 'test@example.com', 'name': 'Test User', 'mobile_number': '1234567890'})
         response = self.app.post('/expenses', json={'total_amount': 1000, 'split_type': 'equal', 'user_id': 1})
         self.assertEqual(response.status_code, 201)
