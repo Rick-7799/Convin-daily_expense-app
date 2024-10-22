@@ -124,11 +124,3 @@ python -m unittest test_app.py
 ```
 
 ```
-
-### Key Changes Made
-
-- Removed the acknowledgments section.
-
-This streamlined `README.md` file provides clear instructions on how to set up and interact with your application without any additional sections.
-
-If you need any further modifications or additional information, feel free to ask!
