@@ -12,5 +12,5 @@ class User(db.Model):
 class Expense(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     total_amount = db.Column(db.Float, nullable=False)
-    split_type = db.Column(db.String(20), nullable=False)  # 'equal', 'exact', 'percentage'
+    split_type = db.Column(db.String(20), nullable=False) 
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
