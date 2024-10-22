@@ -1,6 +1,4 @@
 
-
-```markdown
 # Daily Expenses Sharing Application
 
 This is a Flask-based web application designed for managing daily expenses and sharing costs among users. Users can add expenses, split them in various ways, and keep track of their financial contributions.
@@ -121,6 +119,3 @@ You can interact with the application using various API endpoints. Below are som
 To run the automated tests for this application, execute:
 ```bash
 python -m unittest test_app.py
-```
-
-```
