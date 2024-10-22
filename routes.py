@@ -3,8 +3,6 @@ from models import db, User, Expense
 
 routes_app = Blueprint('routes', __name__)
 
-# User Endpoints
-
 @routes_app.route('/users', methods=['POST'])
 def create_user():
     data = request.get_json()
@@ -20,13 +18,9 @@ def get_user(user_id):
         return jsonify({"error": "User not found"}), 404
     return jsonify({"id": user.id, "email": user.email, "name": user.name, "mobile_number": user.mobile_number}), 200
 
-# Expense Endpoints
-
 @routes_app.route('/expenses', methods=['POST'])
 def add_expense():
     data = request.get_json()
-    
-    # Validate input here (not shown for brevity)
     
     new_expense = Expense(total_amount=data['total_amount'], split_type=data['split_type'], user_id=data['user_id'])
     db.session.add(new_expense)
@@ -48,9 +42,6 @@ def get_overall_expenses():
 @routes_app.route('/balance_sheet', methods=['GET'])
 def download_balance_sheet():
     expenses = Expense.query.all()
-    
-    # Here you would typically generate a downloadable file (CSV, PDF) 
-    # For simplicity, we will just return a JSON response
     balance_sheet_data = [{"id": exp.id, "amount": exp.total_amount, "split_type": exp.split_type} for exp in expenses]
     
     return jsonify(balance_sheet_data), 200
